@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RJ Bespoke Joinery — Fitted wardrobes and joinery in Manchester</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1eee7;--bg2:#e6e1d6;--ink:#15171a;--mute:#626569;--acc:#b9742e;--acc2:#d9944c;--blue:#2d5b7a;--line:#d6d0c2;--dk:#15171a;--card:#faf8f3;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1013;--bg2:#15181c;--ink:#f1ede4;--mute:#98a0a8;--acc:#e3a15c;--acc2:#f2b878;--blue:#6aa6c9;--line:#262b31;--dk:#07080a;--card:#13161a;--on:#170e04}}
+:root[data-theme="dark"]{--bg:#0e1013;--bg2:#15181c;--ink:#f1ede4;--mute:#98a0a8;--acc:#e3a15c;--acc2:#f2b878;--blue:#6aa6c9;--line:#262b31;--dk:#07080a;--card:#13161a;--on:#170e04}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:70px;overflow-anchor:none}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;padding-bottom:74px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.dsp{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1;letter-spacing:-.025em}
+.w{max-width:1100px;margin:0 auto;padding:0 22px}
+.curtain{position:fixed;inset:0;z-index:200;background:var(--dk);display:grid;place-items:center;pointer-events:none;color:#f1ede4;animation:cur .9s 1.35s cubic-bezier(.77,0,.18,1) forwards}
+.curtain div{width:min(78vw,420px)}
+.curtain b{display:block;font:800 clamp(48px,14vw,96px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.curtain b span{color:#d9944c}
+.curtain i{display:block;height:2px;background:#33383f;margin:18px 0 10px;position:relative}
+.curtain i::after{content:"";position:absolute;left:0;top:0;height:100%;width:100%;background:#d9944c;transform-origin:left;animation:ln 1.2s .1s cubic-bezier(.6,0,.2,1) both}
+.curtain small{font:500 12px Inter,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#98a0a8}
+@keyframes cur{to{transform:translateY(-100%);visibility:hidden}}
+@keyframes ln{from{transform:scaleX(0)}}
+@keyframes up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes mq{to{transform:translateX(-50%)}}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--acc),var(--blue))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:800 20px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}.logo span{color:var(--acc)}
+nav{display:none;gap:26px;font-size:14px;font-weight:500;color:var(--mute)}nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--acc2),var(--acc));color:var(--on);padding:15px 28px;border-radius:10px;font:700 15px Inter,sans-serif;border:0;cursor:pointer;transition:transform .2s,filter .3s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}.btn.o{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn.o:hover{background:var(--ink);color:var(--bg)}
+header .btn{padding:10px 18px;font-size:14px}
+.tag{font:600 12px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:12px}
+.tag::before{content:"";width:26px;height:2px;background:var(--acc)}
+h1{font-size:clamp(46px,12.5vw,104px);margin:16px 0 20px}h1 em{font-style:normal;color:var(--acc)}
+h2{font-size:clamp(34px,8vw,64px);margin:12px 0 14px}h2 em{font-style:normal;color:var(--acc)}
+.lead{color:var(--mute);font-size:18px;max-width:470px}.sub{color:var(--mute);max-width:540px;margin-bottom:32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero{padding:42px 0 46px;position:relative;overflow:hidden;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;background-position:-1px -1px}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,transparent,var(--bg) 75%);pointer-events:none}
+.hero .w{display:grid;gap:30px;position:relative;z-index:1}
+.hero .tag,.hero h1,.hero .lead,.hero .cta,.hero .stage{animation:up 1s both}
+.hero .tag{animation-delay:1.8s}.hero h1{animation-delay:1.9s}.hero .lead{animation-delay:2.05s}.hero .cta{animation-delay:2.2s}.hero .stage{animation-delay:2.1s}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 14px 12px;--f:#efe9de}
+.stage svg{display:block;width:100%;height:auto}
+.stage small{display:block;text-align:center;color:var(--mute);font-size:12px;margin-top:6px}
+.wd .fr{fill:color-mix(in srgb,var(--f) 78%,#000)}.wd .dr{fill:var(--f);stroke:color-mix(in srgb,var(--f) 70%,#000);stroke-width:1.2}
+.wd .in{fill:none;stroke:color-mix(in srgb,var(--f) 74%,#000);stroke-width:1.4}.wd .hd{fill:#cfa24a}.wd *{transition:fill .5s,stroke .5s}
+.wd .dm{stroke:var(--blue);stroke-width:1.4;fill:none}.wd text{fill:var(--blue);font:600 13px Inter,sans-serif}.wd .fl{stroke:var(--mute);stroke-width:2}
+.mq{overflow:hidden;white-space:nowrap;background:var(--dk);padding:16px 0}.mq div{display:inline-block;animation:mq 30s linear infinite;font:800 26px "Bricolage Grotesque",sans-serif;color:#d9944c;letter-spacing:-.01em}.mq span{margin:0 24px}.mq em{font-style:normal;color:#6aa6c9}
+section{padding:68px 0}.alt{background:var(--bg2)}
+.svc{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:230px;position:relative;overflow:hidden;transition:transform .35s,background .35s,color .35s,border-color .3s}
+.sc .n{position:absolute;right:16px;top:6px;font:800 76px/1 "Bricolage Grotesque",sans-serif;color:var(--line);transition:.35s}
+.sc h3{font-size:30px;margin:64px 0 10px}.sc p{color:var(--mute);font-size:15px;transition:.35s}
+.sc:hover{background:var(--dk);color:#f1ede4;transform:translateY(-6px);border-color:var(--dk)}.sc:hover p{color:#98a0a8}.sc:hover .n{color:#d9944c;opacity:.35}
+.pl{display:grid;gap:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.panel+.panel{margin-top:14px}
+.panel h3{font-size:19px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:baseline}.panel h3 b{font:600 14px Inter,sans-serif;color:var(--acc)}
+input[type=range]{width:100%;accent-color:var(--acc);height:34px}
+.sg{display:flex;gap:8px;flex-wrap:wrap}.sg button{font:600 14px Inter,sans-serif;padding:11px 18px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:.2s}.sg button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sw{display:flex;gap:12px;flex-wrap:wrap}.sw button{width:46px;height:46px;border-radius:12px;border:3px solid var(--card);box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:.25s}.sw button.on{box-shadow:0 0 0 2px var(--acc);transform:scale(1.08)}
+.fn{font-size:13px;color:var(--mute);margin-top:10px}.sum{white-space:pre-line;font-size:14px;color:var(--mute);background:var(--bg2);border-radius:12px;padding:14px;margin:12px 0}
+.ba{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;border:1px solid var(--line);user-select:none;-webkit-user-select:none}
+.ba>div{position:absolute;inset:0;display:grid;place-items:center;font:700 14px Inter,sans-serif;color:#fff;text-align:center;padding:14px}
+.ba .b{background:linear-gradient(135deg,#7b7f84,#4b4e53)}
+.ba .a{background:linear-gradient(135deg,#15171a,#2d5b7a 60%,#d9944c);clip-path:inset(0 0 0 var(--p,50%))}
+.ba .a::before{content:"";position:absolute;inset:14% 8%;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 2px,transparent 2px 25%);border-radius:6px}
+.ba .ln{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;transform:translateX(-1.5px);pointer-events:none;z-index:2}
+.ba .ln::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;color:#15171a;display:grid;place-items:center;font-size:20px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3;margin:0}
+.ba .lb{position:absolute;top:12px;font:700 11px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;background:rgba(0,0,0,.55);color:#fff;padding:5px 10px;border-radius:99px;z-index:2;pointer-events:none}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 22px 18px;margin:0 -22px;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
+.car div{flex:0 0 76%;max-width:330px;aspect-ratio:3/4;border-radius:18px;scroll-snap-align:center;display:grid;place-items:end start;padding:18px;color:#fff;font:700 15px Inter,sans-serif}
+.car div:nth-child(6n+1){background:linear-gradient(160deg,#2d5b7a,#15171a)}.car div:nth-child(6n+2){background:linear-gradient(160deg,#d9944c,#7a3f12)}.car div:nth-child(6n+3){background:linear-gradient(160deg,#4a6b57,#15171a)}.car div:nth-child(6n+4){background:linear-gradient(160deg,#6b7078,#23262b)}.car div:nth-child(6n+5){background:linear-gradient(160deg,#b8715a,#3b1d12)}.car div:nth-child(6n){background:linear-gradient(160deg,#e6dcc6,#8c7a55);color:#2a2214}
+.st{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line)}.st .dsp{font-size:48px;color:var(--acc)}.st h3{font-size:26px;margin-bottom:4px}.st p{color:var(--mute);font-size:15px}
+.fq{border-bottom:1px solid var(--line)}.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;background:none;border:0;color:var(--ink);font:600 16px Inter,sans-serif;text-align:left;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none}
+.pm{position:relative;width:18px;height:18px;flex:none;transition:transform .45s cubic-bezier(.32,.72,0,1)}.pm::before,.pm::after{content:"";position:absolute;left:0;top:8px;width:18px;height:2px;background:var(--acc);transition:transform .45s cubic-bezier(.32,.72,0,1)}.pm::after{transform:rotate(90deg)}
+.fq.open .pm{transform:rotate(180deg)}.fq.open .pm::after{transform:rotate(0)}
+.fa{height:0;overflow:hidden;transition:height .55s cubic-bezier(.32,.72,0,1)}.fa p{color:var(--mute);font-size:15px;padding-bottom:20px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .55s cubic-bezier(.32,.72,0,1)}.fq.open .fa p{opacity:1;transform:none;transition-delay:.1s}
+.fin{background:linear-gradient(135deg,var(--dk),#1d3a4d);color:#f1ede4;border-radius:26px;padding:44px 26px}.fin h2{color:#f1ede4}.fin .sub{color:#a3b4c0}.fin .btn.o{color:#f1ede4;border-color:#f1ede4}.fin .btn.o:hover{background:#f1ede4;color:#15171a}
+.rows{max-width:540px;margin-top:28px}.row{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px}.row span{color:#a3b4c0}.row b{font-weight:500;text-align:right}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:26px 22px 40px}
+.bar2{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line)}.bar2 a{flex:1;padding:13px;font-size:14px}
+.rv{opacity:0;transform:translateY(26px);transition:.75s}.rv.in{opacity:1;transform:none}
+@media(min-width:820px){nav{display:flex}.hero .w{grid-template-columns:1fr 1.15fr;align-items:center}.pl{grid-template-columns:1.3fr 1fr}.car div{flex-basis:300px}.bar2{display:none}body{padding-bottom:0}.fin{padding:64px}}
+@media(prefers-reduced-motion:reduce){.curtain{display:none}.hero *,.mq div{animation:none!important}.rv{opacity:1;transform:none;transition:none}.fa,.fa p,.pm,.pm::before,.pm::after{transition:none}}
+</style>
+</head>
+<body>
+<div class="curtain" aria-hidden="true"><div><b>RJ<span>.</span></b><i></i><small>Bespoke Joinery · Manchester</small></div></div>
+<div class="prog" id="pg"></div>
+<header><div class="w"><a class="logo" href="#top">RJ<span>.</span> Bespoke Joinery</a><nav><a href="#services">Services</a><a href="#planner">Wardrobe planner</a><a href="#work">Our work</a><a href="#contact">Contact</a></nav><a class="btn" href="tel:+447928444388">Call</a></div></header>
+<main id="top">
+<div class="hero"><div class="w">
+<div><span class="tag">Worsley · Manchester</span>
+<h1>Built to <em>fit</em> your space</h1>
+<p class="lead">Fitted wardrobes, bespoke furniture and quality joinery, designed and made around your home.</p>
+<div class="cta"><a class="btn" href="#planner">Plan your wardrobe</a><a class="btn o" href="#services">What we do</a></div></div>
+<div class="stage" id="hs"><div id="hsv"></div><small>Concept preview · your real projects go here</small></div>
+</div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="services"><div class="w rv"><span class="tag">What we do</span><h2>Three things, <em>done properly</em></h2><p class="sub">Joinery made to measure for homes in Worsley and across Manchester.</p>
+<div class="svc">
+<div class="sc"><div class="n">01</div><h3>Fitted wardrobes</h3><p>Built-in wardrobes designed to use every centimetre of your room.</p></div>
+<div class="sc"><div class="n">02</div><h3>Bespoke furniture</h3><p>Furniture made to your design, size and style.</p></div>
+<div class="sc"><div class="n">03</div><h3>Joinery</h3><p>Custom woodwork and joinery made for your home.</p></div>
+</div></div></section>
+
+<section class="alt" id="planner"><div class="w rv"><span class="tag">Wardrobe planner</span><h2>Plan it. <em>See it.</em></h2><p class="sub">Move the slider, pick a door style and finish. This is a visual preview; exact sizes and finishes are agreed with RJ after a visit.</p>
+<div class="pl"><div class="stage" id="ps"><div id="psv"></div><small id="pn"></small></div>
+<div>
+<div class="panel"><h3>Width <b id="wv"></b></h3><input type="range" id="rw" min="120" max="360" step="10" value="240" aria-label="Wardrobe width"></div>
+<div class="panel"><h3>Door style</h3><div class="sg" id="g-d"><button data-v="shaker" class="on">Shaker</button><button data-v="flat">Flat</button><button data-v="slat">Slatted</button></div></div>
+<div class="panel"><h3>Finish</h3><div class="sw" id="g-f"></div><p class="fn" id="fn"></p></div>
+<div class="panel"><h3>Your plan</h3><div class="sum" id="sm"></div><div class="cta" style="margin-top:0"><a class="btn" id="sl" href="#">Text this plan</a><a class="btn o" href="tel:+447928444388">Call RJ</a></div></div>
+</div></div></div></section>
+
+<section id="work"><div class="w rv"><span class="tag">Our work</span><h2>Recent <em>projects</em></h2><p class="sub">Swipe through. Real photos from the Yell listing replace these tiles.</p>
+<div class="car"><div>Fitted wardrobe</div><div>Bespoke furniture</div><div>Alcove units</div><div>Joinery detail</div><div>Bedroom project</div><div>Finished install</div></div>
+<h3 class="dsp" style="font-size:28px;margin:34px 0 14px">Before &amp; after</h3>
+<div class="ba" id="ba"><div class="b">Photo: before</div><div class="a">Photo: after</div><span class="lb" style="left:12px">Before</span><span class="lb" style="right:12px">After</span><div class="ln"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+</div></section>
+
+<section class="alt"><div class="w rv"><span class="tag">How it works</span><h2>From idea to <em>fitted</em></h2><p class="sub">&nbsp;</p>
+<div class="st"><div class="dsp">1</div><div><h3>Tell us your idea</h3><p>Call or text RJ about what you need.</p></div></div>
+<div class="st"><div class="dsp">2</div><div><h3>Design</h3><p>Your space, your style and your storage needs shape the design.</p></div></div>
+<div class="st"><div class="dsp">3</div><div><h3>Made</h3><p>Your joinery is built to measure.</p></div></div>
+<div class="st"><div class="dsp">4</div><div><h3>Fitted</h3><p>Installed in your home.</p></div></div>
+</div></section>
+
+<section><div class="w rv"><span class="tag">Questions</span><h2>Good to <em>know</em></h2><p class="sub">&nbsp;</p>
+<div class="fq"><button type="button" aria-expanded="false">What do you make?<span class="pm"></span></button><div class="fa"><div><p>Fitted wardrobes, bespoke furniture and joinery.</p></div></div></div>
+<div class="fq"><button type="button" aria-expanded="false">Where are you based?<span class="pm"></span></button><div class="fa"><div><p>Worsley, Manchester.</p></div></div></div>
+<div class="fq"><button type="button" aria-expanded="false">How do I start?<span class="pm"></span></button><div class="fa"><div><p>Plan your wardrobe above, then text or call on +44 7928 444388.</p></div></div></div>
+</div></section>
+
+<section id="contact" class="alt"><div class="w rv"><div class="fin"><span class="tag" style="color:#d9944c">Contact</span><h2>Let’s build <em style="color:#d9944c">yours</em></h2><p class="sub">Call or text RJ to talk about your project.</p>
+<div class="cta"><a class="btn" href="tel:+447928444388">Call +44 7928 444388</a><a class="btn o" href="sms:+447928444388">Send a text</a></div>
+<div class="rows"><div class="row"><span>Phone</span><b>+44 7928 444388</b></div><div class="row"><span>Location</span><b>Worsley, Manchester</b></div><div class="row"><span>Services</span><b>Fitted wardrobes · Furniture · Joinery</b></div></div></div></div></section>
+</main>
+<footer>© RJ Bespoke Joinery. Concept demo, not the official website.</footer>
+<div class="bar2"><a class="btn" href="tel:+447928444388">Call</a><a class="btn o" href="#planner">Plan wardrobe</a></div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var FIN=[["Warm white","#efe9de"],["Sage","#8fa592"],["Navy","#26364d"],["Graphite","#3a3e44"],["Oak","#c28b52"],["Clay","#b8715a"]];
+var S={w:240,d:"shaker",f:0};
+function wd(w,d){var H=240,n=Math.max(2,Math.round(w/60)),dw=(w-8)/n,s='<svg class="wd" viewBox="-14 -34 '+(w+28)+' '+(H+54)+'">';
+s+='<rect class="fr" x="0" y="0" width="'+w+'" height="'+H+'" rx="3"/>';
+for(var i=0;i<n;i++){var x=4+i*dw;s+='<rect class="dr" x="'+(x+1)+'" y="5" width="'+(dw-2)+'" height="'+(H-14)+'" rx="2"/>';
+if(d==="shaker")s+='<rect class="in" x="'+(x+10)+'" y="15" width="'+(dw-20)+'" height="'+(H-34)+'" rx="1"/>';
+if(d==="slat")for(var k=1;k<Math.floor(dw/9);k++)s+='<line class="in" x1="'+(x+k*9)+'" y1="12" x2="'+(x+k*9)+'" y2="'+(H-14)+'"/>';
+var hx=i%2===0?x+dw-9:x+7;s+='<rect class="hd" x="'+hx+'" y="'+(H/2-18)+'" width="3.5" height="36" rx="1.5"/>'}
+s+='<line class="fl" x1="-14" y1="'+(H+4)+'" x2="'+(w+14)+'" y2="'+(H+4)+'"/>';
+s+='<path class="dm" d="M0 -16H'+w+'M0 -22V-10M'+w+' -22V-10"/><text x="'+(w/2)+'" y="-24" text-anchor="middle">'+w+' cm</text></svg>';return s}
+$("hsv").innerHTML=wd(260,"shaker");var hi=0;setInterval(function(){hi=(hi+1)%FIN.length;$("hs").style.setProperty("--f",FIN[hi][1])},2600);
+var m="";["Fitted wardrobes","Bespoke furniture","Joinery","Worsley","Manchester"].concat(["Fitted wardrobes","Bespoke furniture","Joinery","Worsley","Manchester"]).forEach(function(t){m+="<span>"+t+"</span><em>■</em>"});$("mq").innerHTML=m;
+$("g-f").innerHTML=FIN.map(function(f,i){return '<button data-i="'+i+'" style="background:'+f[1]+'" aria-label="'+f[0]+'"'+(i===0?' class="on"':'')+'></button>'}).join("");
+var DN={shaker:"Shaker",flat:"Flat",slat:"Slatted"};
+function ren(){$("psv").innerHTML=wd(S.w,S.d);$("ps").style.setProperty("--f",FIN[S.f][1]);$("wv").textContent=S.w+" cm";$("fn").textContent="Finish: "+FIN[S.f][0]+" (colour preview)";
+var t=S.w+" cm wide · "+DN[S.d]+" doors · "+FIN[S.f][0];$("pn").textContent=t;$("sm").textContent="Width: "+S.w+" cm\nDoors: "+DN[S.d]+"\nFinish: "+FIN[S.f][0];
+$("sl").href="sms:+447928444388?body="+encodeURIComponent("Hello RJ, I’d like a fitted wardrobe: "+S.w+" cm wide, "+DN[S.d].toLowerCase()+" doors, "+FIN[S.f][0].toLowerCase()+" finish. Could we arrange a visit?")}
+$("rw").oninput=function(){S.w=+this.value;ren()};
+function grp(id,k,fn){$(id).onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle("on",x===b)});S[k]=fn?fn(b):b.dataset.v;ren()}}
+grp("g-d","d");grp("g-f","f",function(b){return +b.dataset.i});ren();
+$("ba").querySelector("input").oninput=function(){$("ba").style.setProperty("--p",this.value+"%")};
+function fh(f){var a=f.querySelector(".fa");a.style.height=f.classList.contains("open")?a.firstElementChild.offsetHeight+"px":"0px"}
+document.querySelectorAll(".fq button").forEach(function(b){b.addEventListener("mousedown",function(e){e.preventDefault()});b.addEventListener("click",function(){var f=b.parentNode,o=f.classList.toggle("open");b.setAttribute("aria-expanded",o);fh(f)})});
+addEventListener("resize",function(){document.querySelectorAll(".fq.open").forEach(fh)});
+addEventListener("scroll",function(){var h=document.documentElement;$("pg").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+"%"},{passive:true});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("in")})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
